@@ -1,0 +1,24 @@
+<div class="ui compact buttons">
+  <div class="ui floating dropdown labeled icon button" [class.activated]="active()">
+    <i class="icon {{iconType}}"></i>
+    <button class="text ui tag label">
+        Choose ...
+    </button>
+    <div class="menu">
+      <div class="ui icon input">
+        <i class="search icon"></i>
+        <input type="text" name="search" placeholder="Search ...">
+      </div>
+      <div class="divider"></div>
+      <div class="header">
+        <i class="tags icon"></i>
+        Tag {{filterType}}
+      </div>
+      <div class="item" *ngFor="let item of items; let nr = index" (click)="select(nr)">
+        <div class="ui empty circular label" [class.black]="nr % 2"></div>
+        {{item}}
+      </div>
+    </div>
+  </div>
+  <button (click)="clear()" class="ui right icon button"><i class="remove circle icon"></i></button>
+</div>

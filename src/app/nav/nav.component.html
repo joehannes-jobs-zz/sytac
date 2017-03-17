@@ -1,0 +1,13 @@
+<div class="ui inverted compact center aligned grid container segment">
+  <div class="ui inverted secondary pointing menu row">
+    <a class="ui fluid item" [class.active]="activeMenuNr == 0" (mouseenter)="activeMenuNr = 0" (mouseleave)="activeMenuNr = -1">
+      <meister-dropdown filter-type="types" [items]="types"></meister-dropdown>
+    </a>
+    <a class="ui fluid item" [class.active]="activeMenuNr == 1" (mouseenter)="activeMenuNr = 1" (mouseleave)="activeMenuNr = -1">
+      <meister-dropdown filter-type="brands" [items]="brands"></meister-dropdown>
+    </a>
+    <a class="ui fluid item" [class.active]="activeMenuNr == 2" (mouseenter)="activeMenuNr = 2" (mouseleave)="activeMenuNr = -1">
+      <meister-dropdown filter-type="colors" [items]="colors"></meister-dropdown>
+    </a>
+  </div>
+</div>
